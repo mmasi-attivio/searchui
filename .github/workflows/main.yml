@@ -11,3 +11,7 @@ jobs:
       with:
         java-version: '11.0.3'
     - run: mvn -B clean package -DskipTests
+    - uses: actions/upload-artifact@master
+      with:
+        name: searchui-module
+        path: module/target
